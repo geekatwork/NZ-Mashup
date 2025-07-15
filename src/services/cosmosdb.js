@@ -13,7 +13,7 @@ class CosmosDBClient {
   // Initialize connection (same code for local and Azure!)
   async initializeDatabase() {
     const { CosmosClient } = await import('@azure/cosmos');
-    
+
     const options = {
       endpoint: this.endpoint,
       key: this.key,
@@ -40,21 +40,18 @@ class CosmosDBClient {
         id: 'GravelRoads',
         partitionKey: { paths: ['/region'] },
         indexingPolicy: {
-          includedPaths: [
-            { path: '/bounds/*' },
-            { path: '/properties/*' }
-          ]
-        }
+          includedPaths: [{ path: '/bounds/*' }, { path: '/properties/*' }],
+        },
       },
       {
         id: 'Users',
-        partitionKey: { paths: ['/userId'] }
+        partitionKey: { paths: ['/userId'] },
       },
       {
         id: 'Analytics',
         partitionKey: { paths: ['/date'] },
-        timeToLiveInSeconds: 2592000 // 30 days TTL
-      }
+        timeToLiveInSeconds: 2592000, // 30 days TTL
+      },
     ];
 
     for (const containerConfig of containers) {
@@ -72,7 +69,7 @@ class CosmosDBClient {
   // Store gravel roads data
   async storeGravelRoads(bounds, geoJsonData) {
     const container = this.database.container('GravelRoads');
-    
+
     const document = {
       id: `roads_${Date.now()}`,
       region: this.getBoundsRegion(bounds),
@@ -80,11 +77,11 @@ class CosmosDBClient {
         north: bounds.getNorth(),
         south: bounds.getSouth(),
         east: bounds.getEast(),
-        west: bounds.getWest()
+        west: bounds.getWest(),
       },
       geoJson: geoJsonData,
       fetchedAt: new Date().toISOString(),
-      ttl: 3600 // Cache for 1 hour
+      ttl: 3600, // Cache for 1 hour
     };
 
     return await container.items.create(document);
@@ -110,8 +107,8 @@ class CosmosDBClient {
         { name: '@north', value: bounds.getNorth() },
         { name: '@south', value: bounds.getSouth() },
         { name: '@east', value: bounds.getEast() },
-        { name: '@west', value: bounds.getWest() }
-      ]
+        { name: '@west', value: bounds.getWest() },
+      ],
     };
 
     const { resources } = await container.items.query(query).fetchAll();
@@ -121,7 +118,7 @@ class CosmosDBClient {
   // Track analytics
   async logAnalytics(event, data = {}) {
     const container = this.database.container('Analytics');
-    
+
     const document = {
       id: `${event}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       date: new Date().toISOString().split('T')[0], // Partition by date
@@ -129,7 +126,7 @@ class CosmosDBClient {
       data,
       timestamp: new Date().toISOString(),
       // eslint-disable-next-line no-undef
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'Server-Side'
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'Server-Side',
     };
 
     return await container.items.create(document);
@@ -139,7 +136,7 @@ class CosmosDBClient {
     // Simple region calculation for partitioning
     const centerLat = (bounds.getNorth() + bounds.getSouth()) / 2;
     const centerLng = (bounds.getEast() + bounds.getWest()) / 2;
-    
+
     // New Zealand regions (adjust as needed)
     if (centerLat > -41 && centerLng > 172) return 'north_island_east';
     if (centerLat > -41 && centerLng <= 172) return 'north_island_west';

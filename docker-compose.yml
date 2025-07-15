@@ -4,7 +4,7 @@ services:
   nz-mashup:
     build: .
     ports:
-      - "5173:5173"
+      - '5173:5173'
     volumes:
       # Mount source code for development (hot reload)
       - ./src:/app/src
@@ -27,11 +27,11 @@ services:
   cosmosdb:
     image: mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator:latest
     ports:
-      - "8081:8081"      # Cosmos DB HTTPS endpoint
-      - "10251:10251"    # MongoDB endpoint
-      - "10252:10252"    # Cassandra endpoint  
-      - "10253:10253"    # Table API endpoint
-      - "10254:10254"    # Gremlin endpoint
+      - '8081:8081' # Cosmos DB HTTPS endpoint
+      - '10251:10251' # MongoDB endpoint
+      - '10252:10252' # Cassandra endpoint
+      - '10253:10253' # Table API endpoint
+      - '10254:10254' # Gremlin endpoint
     environment:
       - AZURE_COSMOS_EMULATOR_PARTITION_COUNT=10
       - AZURE_COSMOS_EMULATOR_ENABLE_DATA_PERSISTENCE=true

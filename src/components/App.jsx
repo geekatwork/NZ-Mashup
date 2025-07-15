@@ -59,19 +59,22 @@ const layers = [
   {
     name: 'CartoDB Positron',
     url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
     id: 'carto-positron',
   },
   {
     name: 'CartoDB Dark Matter',
     url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
     id: 'carto-dark',
   },
   {
     name: 'Stamen Terrain',
     url: 'https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}.png?api_key=demo',
-    attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a> &copy; <a href="https://stamen.com/">Stamen Design</a> &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a>',
+    attribution:
+      '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a> &copy; <a href="https://stamen.com/">Stamen Design</a> &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a>',
     id: 'stamen-terrain',
   },
   {
@@ -175,21 +178,24 @@ export default function App() {
   const mapRef = useRef();
 
   // When the School Zones overlay is ticked, select all schools in view
-  const handleShowSchoolZones = useCallback((checked) => {
-    setShowSchoolZones(checked);
-    if (checked) {
-      if (filteredZones && filteredZones.features && filteredZones.features.length > 0) {
-        const namesInView = filteredZones.features
-          .map((f) => f.properties?.School_name || 'Unknown')
-          .filter(Boolean);
-        setZoneFilter(namesInView);
+  const handleShowSchoolZones = useCallback(
+    (checked) => {
+      setShowSchoolZones(checked);
+      if (checked) {
+        if (filteredZones && filteredZones.features && filteredZones.features.length > 0) {
+          const namesInView = filteredZones.features
+            .map((f) => f.properties?.School_name || 'Unknown')
+            .filter(Boolean);
+          setZoneFilter(namesInView);
+        }
+        // Do not clear zoneFilter if filteredZones is not ready
+      } else {
+        setZoneFilter([]); // Only clear when overlay is toggled OFF
+        setZonesCollapsed(true); // Collapse the school zones in view section
       }
-      // Do not clear zoneFilter if filteredZones is not ready
-    } else {
-      setZoneFilter([]); // Only clear when overlay is toggled OFF
-      setZonesCollapsed(true); // Collapse the school zones in view section
-    }
-  }, [filteredZones, setZoneFilter, setZonesCollapsed]);
+    },
+    [filteredZones, setZoneFilter, setZonesCollapsed]
+  );
 
   useEffect(() => {
     if (!mapRef.current) return;
@@ -361,16 +367,16 @@ export default function App() {
           >
             <MapFilterLogic allSchoolZones={allSchoolZones} setFilteredZones={setFilteredZones} />
             <TileLayer attribution={currentLayer.attribution} url={currentLayer.url} />
-            
+
             {/* Real gravel roads overlay with OSM data */}
             <GravelRoadsOverlay visible={showGravelRoads} />
-            
+
             {/* Custom control for gravel roads */}
-            <GravelRoadsControl 
-              showGravelRoads={showGravelRoads} 
-              setShowGravelRoads={setShowGravelRoads} 
+            <GravelRoadsControl
+              showGravelRoads={showGravelRoads}
+              setShowGravelRoads={setShowGravelRoads}
             />
-            
+
             <LayersControl position="topleft" key="layers-control">
               {/* Data Overlays */}
               <LayersControl.Overlay
@@ -389,7 +395,7 @@ export default function App() {
               >
                 {allLoadingZones && <LoadingZonesLayer data={allLoadingZones} />}
               </LayersControl.Overlay>
-              <LayersControl.Overlay 
+              <LayersControl.Overlay
                 key="gravel-roads-backup"
                 name="Gravel Roads (LayersControl)"
                 checked={showGravelRoads}
@@ -397,7 +403,7 @@ export default function App() {
               >
                 <GravelRoadsWrapper visible={showGravelRoads} />
               </LayersControl.Overlay>
-              
+
               {/* LINZ Cadastral and Infrastructure Overlays */}
               {overlayLayers.map((layer) => (
                 <LayersControl.Overlay key={layer.id} name={layer.name}>

@@ -214,7 +214,7 @@ export default function SidePanel({
               {layer.name}
             </label>
           ))}
-          
+
           {/* Cadastral Data Information */}
           {overlayLayers.length > 0 && (
             <>
@@ -235,7 +235,7 @@ export default function SidePanel({
               </div>
             </>
           )}
-          
+
           <hr style={{ margin: '16px 0' }} />
           <div style={{ borderTop: '1px solid #e0e0e0', margin: '16px 0 12px 0' }} />
           <div
