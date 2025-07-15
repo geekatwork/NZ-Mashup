@@ -14,20 +14,23 @@ A comprehensive New Zealand mapping application that combines OpenStreetMap data
 ## Getting Started
 
 1. **Install dependencies:**
+
    ```sh
    npm install
    ```
 
 2. **Set up environment variables:**
+
    ```sh
    # Copy the example environment file
    cp .env.example .env.local
-   
+
    # Edit .env.local and add your LINZ API key
    # Get a free API key from: https://data.linz.govt.nz/
    ```
 
 3. **Start the development server:**
+
    ```sh
    npm run dev
    ```
@@ -48,6 +51,7 @@ A comprehensive New Zealand mapping application that combines OpenStreetMap data
 ## Cadastral Data
 
 This app now includes comprehensive NZ cadastral and paper road data from LINZ:
+
 - Property boundaries and parcels
 - Paper roads (legal roads that may not be physically constructed)
 - Building outlines and footprints
@@ -121,10 +125,12 @@ Copy `.env.example` to `.env.local` and fill in your values.
 For consistent development environments, you can run this project using Docker:
 
 ### Prerequisites
+
 - Docker installed on your system
 - Docker Compose (usually included with Docker)
 
 ### Quick Start with Docker
+
 1. **Build and run with Docker Compose:**
    ```sh
    docker-compose up --build
@@ -133,6 +139,7 @@ For consistent development environments, you can run this project using Docker:
    - Open [http://localhost:5173](http://localhost:5173) in your browser
 
 ### Docker Commands
+
 - **Build the image:**
   ```sh
   docker build -t nz-mashup .
@@ -147,6 +154,7 @@ For consistent development environments, you can run this project using Docker:
   ```
 
 ### Docker Benefits
+
 - ✅ **Consistent environment** across different machines
 - ✅ **All dependencies** pre-installed and locked
 - ✅ **No local Node.js** installation required
@@ -163,9 +171,11 @@ This project includes basic end-to-end (E2E) tests using [WebdriverIO](https://w
    npm install --save-dev @wdio/cli @wdio/local-runner @wdio/mocha-framework @wdio/chromedriver-service chai
    ```
 2. Initialize WebdriverIO config (if not already):
+
    ```sh
    npx wdio config
    ```
+
    - Choose `chromedriver` for local testing
    - Choose `mocha` as the test framework
    - Set test files pattern to `./wdio.e2e.spec.js`
