@@ -1,56 +1,56 @@
 version: 2
 updates:
   # Enable version updates for npm (JavaScript/Node.js)
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "09:00"
+      interval: 'weekly'
+      day: 'monday'
+      time: '09:00'
     open-pull-requests-limit: 5
     reviewers:
-      - "geekatwork"
+      - 'geekatwork'
     assignees:
-      - "geekatwork"
+      - 'geekatwork'
     commit-message:
-      prefix: "npm"
-      include: "scope"
+      prefix: 'npm'
+      include: 'scope'
     labels:
-      - "dependencies"
-      - "npm"
-    
+      - 'dependencies'
+      - 'npm'
+
   # Enable version updates for Docker
-  - package-ecosystem: "docker"
-    directory: "/"
+  - package-ecosystem: 'docker'
+    directory: '/'
     schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "10:00"
+      interval: 'weekly'
+      day: 'monday'
+      time: '10:00'
     open-pull-requests-limit: 3
     reviewers:
-      - "geekatwork"
+      - 'geekatwork'
     assignees:
-      - "geekatwork"
+      - 'geekatwork'
     commit-message:
-      prefix: "docker"
+      prefix: 'docker'
     labels:
-      - "dependencies"
-      - "docker"
+      - 'dependencies'
+      - 'docker'
 
   # Enable version updates for GitHub Actions (if you add workflows later)
-  - package-ecosystem: "github-actions"
-    directory: "/.github/workflows"
+  - package-ecosystem: 'github-actions'
+    directory: '/.github/workflows'
     schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "11:00"
+      interval: 'weekly'
+      day: 'monday'
+      time: '11:00'
     open-pull-requests-limit: 2
     reviewers:
-      - "geekatwork"
+      - 'geekatwork'
     assignees:
-      - "geekatwork"
+      - 'geekatwork'
     commit-message:
-      prefix: "actions"
+      prefix: 'actions'
     labels:
-      - "dependencies"
-      - "github-actions"
+      - 'dependencies'
+      - 'github-actions'

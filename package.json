@@ -4,12 +4,18 @@
   "description": "NZ mapping application with OpenStreetMap data, gravel roads, and cadastral overlays",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --ext js,jsx --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {

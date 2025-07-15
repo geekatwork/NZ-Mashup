@@ -13,11 +13,11 @@ export default function GravelRoadsOverlay({ visible = true }) {
   const fetchGravelRoads = async (bounds) => {
     setLoading(true);
     setError(null);
-    
+
     try {
       // Get current map bounds
       const bbox = `${bounds.getSouth()},${bounds.getWest()},${bounds.getNorth()},${bounds.getEast()}`;
-      
+
       // Overpass API query for unsealed/gravel roads with public access in New Zealand
       const query = `
         [out:json][timeout:25];
@@ -43,17 +43,17 @@ export default function GravelRoadsOverlay({ visible = true }) {
       }
 
       const data = await response.json();
-      
+
       // Convert OSM data to GeoJSON
       const geojson = {
         type: 'FeatureCollection',
         features: data.elements
-          .filter(element => element.type === 'way' && element.geometry)
-          .map(way => ({
+          .filter((element) => element.type === 'way' && element.geometry)
+          .map((way) => ({
             type: 'Feature',
             geometry: {
               type: 'LineString',
-              coordinates: way.geometry.map(node => [node.lon, node.lat]),
+              coordinates: way.geometry.map((node) => [node.lon, node.lat]),
             },
             properties: {
               id: way.id,
@@ -62,7 +62,7 @@ export default function GravelRoadsOverlay({ visible = true }) {
               name: way.tags?.name || way.tags?.ref || `Road ${way.id}`,
               tracktype: way.tags?.tracktype || null,
             },
-          }))
+          })),
       };
 
       return geojson;
@@ -90,7 +90,7 @@ export default function GravelRoadsOverlay({ visible = true }) {
       try {
         const bounds = map.getBounds();
         const geojson = await fetchGravelRoads(bounds);
-        
+
         if (!geojson || geojson.features.length === 0) {
           return;
         }
@@ -108,11 +108,11 @@ export default function GravelRoadsOverlay({ visible = true }) {
             const surface = feature.properties.surface;
             const highway = feature.properties.highway;
             const tracktype = feature.properties.tracktype;
-            
+
             let color = '#8B4513'; // Default brown
             let weight = 3;
             let dashArray = null;
-            
+
             // Color based on surface type
             if (surface === 'gravel') {
               color = '#8B4513'; // Saddle brown
@@ -130,7 +130,7 @@ export default function GravelRoadsOverlay({ visible = true }) {
               weight = 2;
               dashArray = '2, 3';
             }
-            
+
             // Adjust style based on track type
             if (tracktype) {
               if (tracktype === 'grade1') {
@@ -140,7 +140,7 @@ export default function GravelRoadsOverlay({ visible = true }) {
                 dashArray = '3, 7';
               }
             }
-            
+
             return {
               color: color,
               weight: weight,
@@ -148,12 +148,14 @@ export default function GravelRoadsOverlay({ visible = true }) {
               dashArray: dashArray,
             };
           },
+          // ESLint disable for dynamic OSM data properties
+          /* eslint-disable react/prop-types */
           onEachFeature: (feature, layer) => {
             const props = feature.properties;
             const surface = props.surface !== 'unknown' ? props.surface : 'unsealed';
             const highway = props.highway;
             const tracktype = props.tracktype ? ` (${props.tracktype})` : '';
-            
+
             layer.bindPopup(`
               <div style="font-size: 12px;">
                 <strong>${props.name}</strong><br/>
@@ -163,11 +165,11 @@ export default function GravelRoadsOverlay({ visible = true }) {
               </div>
             `);
           },
+          /* eslint-enable react/prop-types */
         });
 
         setGravelLayer(layer);
         map.addLayer(layer);
-        
       } catch (err) {
         setError(err.message);
       }
@@ -184,7 +186,7 @@ export default function GravelRoadsOverlay({ visible = true }) {
     let moveTimeout;
     const onMapMove = () => {
       if (!visible || map.getZoom() < 12) return;
-      
+
       clearTimeout(moveTimeout);
       moveTimeout = setTimeout(() => {
         loadGravelRoads();
@@ -220,12 +222,13 @@ export default function GravelRoadsOverlay({ visible = true }) {
         map.removeControl(loadingControl);
       } catch (e) {
         // Control might already be removed, ignore error
+        console.debug('Control removal failed:', e.message);
       }
       setLoadingControl(null);
     }
 
     if (!visible) return;
-    
+
     if (loading) {
       const indicator = L.control({ position: 'bottomleft' });
       indicator.onAdd = () => {
@@ -254,7 +257,7 @@ export default function GravelRoadsOverlay({ visible = true }) {
       };
       indicator.addTo(map);
       setLoadingControl(indicator);
-      
+
       // Remove error after 3 seconds
       setTimeout(() => {
         try {
@@ -262,21 +265,23 @@ export default function GravelRoadsOverlay({ visible = true }) {
             map.removeControl(indicator);
             setLoadingControl(null);
           }
-        } catch (e) {
+        } catch (error) {
           // Control might already be removed, ignore error
+          console.debug('Error control removal failed:', error.message);
         }
       }, 3000);
     }
   }, [map, loading, error, visible]); // eslint-disable-line react-hooks/exhaustive-deps
-  
+
   // Separate cleanup effect
   useEffect(() => {
     return () => {
       if (loadingControl) {
         try {
           map.removeControl(loadingControl);
-        } catch (e) {
+        } catch (error) {
           // Control might already be removed, ignore error
+          console.debug('Cleanup control removal failed:', error.message);
         }
         setLoadingControl(null);
       }
