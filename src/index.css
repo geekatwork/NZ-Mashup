@@ -1,0 +1,14 @@
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove Leaflet's default black border on feature focus/click */
+.leaflet-interactive:focus {
+  outline: none !important;
+  stroke: #e74c3c !important;
+  stroke-width: 2 !important;
+}

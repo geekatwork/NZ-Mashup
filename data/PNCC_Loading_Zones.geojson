@@ -1,0 +1,667 @@
+{
+  "type": "FeatureCollection",
+  "name": "PNCC_Loading_Zones",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 110,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "Yes",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.612912488916891, -40.354083175475154] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 243,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.609597030986635, -40.358432620620484] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 254,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "Yes",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.610250170967788, -40.358137485925106] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 335,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "Yes",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.608405398225614, -40.355297716316954] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 889,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "Yes",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.60959428210424, -40.353612392932241] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 922,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "Yes",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.61311928100892, -40.351913972792524] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 1141,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "Yes",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.612587197993889, -40.357101230081931] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 1172,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.610227853041835, -40.356922508992511] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2636,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.614038310522261, -40.354780733430189] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2642,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.61502603499315, -40.353881127815235] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2802,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.60900310547342, -40.357029098325185] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2807,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "Yes",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.611787237680176, -40.354621751005631] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2808,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "Yes",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.611718731947803, -40.3546468947318] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2811,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.612014166712697, -40.354344742829092] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2813,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.612648810264687, -40.354065875420716] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2814,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "Yes",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.613670734080273, -40.353609955437889] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2817,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "Yes",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.614386116470314, -40.35342090993494] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2821,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.612651227248506, -40.353189832474463] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2822,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.611748895397199, -40.353590024408902] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2823,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.612328536306137, -40.353333012206257] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2824,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.612208894822516, -40.353387454773873] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2828,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.611228228124645, -40.353818978199847] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2829,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.611180697739968, -40.353840804889622] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2830,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.611131655823556, -40.353865506743141] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2832,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.61039078001491, -40.354100869881755] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2834,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.610738395493854, -40.353100328638838] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2835,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "Yes",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.608960755006308, -40.353156666297288] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2851,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.609571706304394, -40.353941088292615] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2853,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.609611974109811, -40.354343982810228] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2858,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.609450439444117, -40.354622042049215] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2862,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.606759295676511, -40.355847027276596] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2863,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.606926682622117, -40.355321112854774] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2867,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.607820142381087, -40.354703701144622] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2868,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.607856311537404, -40.354758027664332] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2870,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.608091261217083, -40.355062760472926] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2871,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.608299391477374, -40.355767625704189] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2874,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.608828487337831, -40.356458916484399] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2875,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.612213899113755, -40.357730639816396] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2876,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.612503036478472, -40.35775218350522] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2897,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.613342666907414, -40.356765655100972] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 3866,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "Yes",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.609773803080486, -40.35634041449304] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 3868,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.611258130210274, -40.357689990290851] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 3869,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.610749816352666, -40.354887075067928] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 3870,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.610683210818848, -40.354913909248907] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 3878,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.612909971955105, -40.353946862688581] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 3880,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.609974200574811, -40.354815916434305] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 3885,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.612262631876092, -40.353360171030971] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 3891,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.619575198195093, -40.352102272664617] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 3917,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.61018301029921, -40.354724934095032] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 3922,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.609651660696471, -40.356742944054979] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 4142,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.61066484734252, -40.357138183499494] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 4314,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.611556374337027, -40.353043549569207] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 4315,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.611602198160085, -40.353023679032617] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 4362,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "Yes",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.609057889045289, -40.35499718676845] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 4569,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "Off Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.627550211867799, -40.348572348719479] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 4879,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.605575854154949, -40.356380698391021] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 4894,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "No",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.606627874707556, -40.355916452912794] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 4946,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "Yes",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.612658284374874, -40.356203274217727] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 4947,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "Yes",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.612684579625807, -40.356234346452467] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 4948,
+        "UNDERGROUND": "No",
+        "PARKING_TYPE": "Loading Zone",
+        "METERED": "Yes",
+        "BAY_LOCATION": "On Street"
+      },
+      "geometry": { "type": "Point", "coordinates": [175.612710902931411, -40.356263888536127] }
+    }
+  ]
+}
