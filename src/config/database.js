@@ -6,8 +6,8 @@
 export const dbConfig = {
   // Local development (Cosmos DB Emulator)
   development: {
-    endpoint: process.env.COSMOS_DB_ENDPOINT || 'https://localhost:8081',
-    key: process.env.COSMOS_DB_KEY || 'C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw==',
+    endpoint: import.meta.env.VITE_COSMOS_DB_ENDPOINT || 'https://localhost:8081',
+    key: import.meta.env.VITE_COSMOS_DB_KEY || 'C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw==',
     databaseName: 'MappingAppDB',
     containers: {
       roads: 'GravelRoads',
@@ -16,7 +16,7 @@ export const dbConfig = {
     },
     options: {
       // Disable SSL verification for local emulator
-      agent: process.env.NODE_ENV === 'development' ? {
+      agent: import.meta.env.VITE_NODE_ENV === 'development' ? {
         rejectUnauthorized: false
       } : undefined
     }
@@ -24,9 +24,9 @@ export const dbConfig = {
 
   // Production (Azure Cosmos DB)
   production: {
-    endpoint: process.env.AZURE_COSMOS_ENDPOINT,
-    key: process.env.AZURE_COSMOS_KEY,
-    databaseName: process.env.AZURE_COSMOS_DATABASE || 'MappingAppDB',
+    endpoint: import.meta.env.VITE_AZURE_COSMOS_ENDPOINT,
+    key: import.meta.env.VITE_AZURE_COSMOS_KEY,
+    databaseName: import.meta.env.VITE_AZURE_COSMOS_DATABASE || 'MappingAppDB',
     containers: {
       roads: 'GravelRoads',
       users: 'Users', 
@@ -47,13 +47,13 @@ export const dbConfig = {
 
 // Get current environment config
 export const getCurrentConfig = () => {
-  const env = process.env.NODE_ENV || 'development';
+  const env = import.meta.env.VITE_NODE_ENV || 'development';
   return dbConfig[env];
 };
 
 // MongoDB-compatible connection (if using MongoDB API)
 export const getMongoConfig = () => {
-  const env = process.env.NODE_ENV || 'development';
+  const env = import.meta.env.VITE_NODE_ENV || 'development';
   
   if (env === 'development') {
     return {
@@ -66,7 +66,7 @@ export const getMongoConfig = () => {
   }
   
   return {
-    uri: process.env.AZURE_COSMOS_MONGO_URI,
+    uri: import.meta.env.VITE_AZURE_COSMOS_MONGO_URI,
     options: {
       ssl: true,
       retryWrites: false

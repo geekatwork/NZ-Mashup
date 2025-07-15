@@ -148,6 +148,8 @@ export default function GravelRoadsOverlay({ visible = true }) {
               dashArray: dashArray,
             };
           },
+          // ESLint disable for dynamic OSM data properties
+          /* eslint-disable react/prop-types */
           onEachFeature: (feature, layer) => {
             const props = feature.properties;
             const surface = props.surface !== 'unknown' ? props.surface : 'unsealed';
@@ -163,6 +165,7 @@ export default function GravelRoadsOverlay({ visible = true }) {
               </div>
             `);
           },
+          /* eslint-enable react/prop-types */
         });
 
         setGravelLayer(layer);
@@ -220,6 +223,7 @@ export default function GravelRoadsOverlay({ visible = true }) {
         map.removeControl(loadingControl);
       } catch (e) {
         // Control might already be removed, ignore error
+        console.debug('Control removal failed:', e.message);
       }
       setLoadingControl(null);
     }
@@ -262,8 +266,9 @@ export default function GravelRoadsOverlay({ visible = true }) {
             map.removeControl(indicator);
             setLoadingControl(null);
           }
-        } catch (e) {
+        } catch (error) {
           // Control might already be removed, ignore error
+          console.debug('Error control removal failed:', error.message);
         }
       }, 3000);
     }
@@ -275,8 +280,9 @@ export default function GravelRoadsOverlay({ visible = true }) {
       if (loadingControl) {
         try {
           map.removeControl(loadingControl);
-        } catch (e) {
+        } catch (error) {
           // Control might already be removed, ignore error
+          console.debug('Cleanup control removal failed:', error.message);
         }
         setLoadingControl(null);
       }

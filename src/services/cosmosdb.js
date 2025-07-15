@@ -128,7 +128,8 @@ class CosmosDBClient {
       event,
       data,
       timestamp: new Date().toISOString(),
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'Server'
+      // eslint-disable-next-line no-undef
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'Server-Side'
     };
 
     return await container.items.create(document);
