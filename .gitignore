@@ -45,6 +45,12 @@ pids/
 coverage/
 .nyc_output/
 
+# Test results and reports
+playwright-report/
+test-results/
+allure-results/
+allure-report/
+
 # Dependency directories
 jspm_packages/
 

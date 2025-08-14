@@ -160,38 +160,67 @@ For consistent development environments, you can run this project using Docker:
 - ✅ **No local Node.js** installation required
 - ✅ **Easy deployment** and distribution
 
-## End-to-End Testing (WebdriverIO)
+## Testing
 
-This project includes basic end-to-end (E2E) tests using [WebdriverIO](https://webdriver.io/).
+This project includes a comprehensive testing strategy with multiple testing levels:
 
-### Setup
+### Unit Testing (Jest + React Testing Library)
 
-1. Install WebdriverIO and related dependencies (if not already):
-   ```sh
-   npm install --save-dev @wdio/cli @wdio/local-runner @wdio/mocha-framework @wdio/chromedriver-service chai
-   ```
-2. Initialize WebdriverIO config (if not already):
+Run unit tests for components, hooks, and utilities:
 
-   ```sh
-   npx wdio config
-   ```
+```sh
+# Run all unit tests
+npm run test:unit
 
-   - Choose `chromedriver` for local testing
-   - Choose `mocha` as the test framework
-   - Set test files pattern to `./wdio.e2e.spec.js`
+# Run tests in watch mode
+npm run test:watch
 
-### Running the Tests
+# Run tests with coverage report
+npm run test:coverage
+```
 
-1. Start your dev server in one terminal:
-   ```sh
-   npm run dev
-   ```
-2. In another terminal, run:
-   ```sh
-   npx wdio run wdio.conf.js
-   ```
+**Current Coverage:**
+- Components: ErrorBoundary (100%), GravelRoadsControl (partial)
+- Hooks: useGeoJsonData (100%), useMapFilteredZones (95.55%)
 
-This will launch the browser and run the E2E tests in `wdio.e2e.spec.js`.
+### End-to-End Testing (Playwright)
+
+Run comprehensive E2E tests across multiple browsers:
+
+```sh
+# Install Playwright browsers (first time)
+npx playwright install
+
+# Run E2E tests
+npm run test:e2e
+
+# Run E2E tests in headed mode (with browser UI)
+npm run test:e2e:headed
+```
+
+### Cross-Browser Testing (WebDriverIO)
+
+Run compatibility tests across different browsers:
+
+```sh
+# Run WebDriverIO tests
+npm run test:wdio
+```
+
+### Running All Tests
+
+```sh
+# Run all test suites
+npm run test:all
+```
+
+### Testing Configuration
+
+- **Jest**: Unit test configuration in `jest.config.js`
+- **Playwright**: E2E test configuration in `playwright.config.js`
+- **WebDriverIO**: Cross-browser test configuration in `wdio.conf.js`
+
+Tests are automatically run in CI/CD pipeline with coverage reporting.
 
 ---
 
