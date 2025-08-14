@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
   "extends": [
     "eslint:recommended",
@@ -24,5 +25,53 @@
     "react": {
       "version": "detect"
     }
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/**/__tests__/**/*",
+        "src/**/*.test.{js,jsx}",
+        "src/**/*.spec.{js,jsx}",
+        "tests/**/*.spec.{js,jsx}",
+        "tests/**/*.test.{js,jsx}",
+        "src/setupTests.js",
+        "jest.config.js",
+        "playwright.config.js"
+      ],
+      "env": {
+        "jest": true,
+        "node": true
+      },
+      "globals": {
+        "describe": "readonly",
+        "it": "readonly",
+        "expect": "readonly",
+        "beforeEach": "readonly",
+        "afterEach": "readonly",
+        "beforeAll": "readonly",
+        "afterAll": "readonly",
+        "jest": "readonly",
+        "global": "readonly"
+      },
+      "rules": {
+        "react/prop-types": "off"
+      }
+    },
+    {
+      "files": ["__mocks__/**/*"],
+      "env": {
+        "node": true,
+        "commonjs": true
+      }
+    },
+    {
+      "files": ["playwright.config.js", "jest.config.js"],
+      "env": {
+        "node": true
+      },
+      "globals": {
+        "process": "readonly"
+      }
+    }
+  ]
 }
