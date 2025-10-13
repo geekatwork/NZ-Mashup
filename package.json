@@ -19,7 +19,7 @@
     "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
-    "@azure/cosmos": "^4.4.1",
+    "@azure/cosmos": "^4.6.0",
     "@turf/bbox": "^7.2.0",
     "@turf/bbox-polygon": "^7.2.0",
     "@turf/boolean-intersects": "^7.2.0",
